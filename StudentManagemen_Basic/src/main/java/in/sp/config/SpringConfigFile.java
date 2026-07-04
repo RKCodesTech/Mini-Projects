@@ -24,4 +24,5 @@ public JdbcTemplate jdbctemplate() {
 	myjdbcteplate.setDataSource(myDatasource());
 	return myjdbcteplate;
 }
+
 }
