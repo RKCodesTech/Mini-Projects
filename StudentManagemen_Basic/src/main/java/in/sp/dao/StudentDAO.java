@@ -1,5 +1,10 @@
 package in.sp.dao;
 
-public class StudentDAO {
+import org.springframework.jdbc.core.JdbcTemplate;
 
+public class StudentDAO {
+private JdbcTemplate jdbcTemplate;
+public  StudentDAO(JdbcTemplate jdbcTemplate){
+	this.jdbcTemplate=jdbcTemplate;
+}
 }
