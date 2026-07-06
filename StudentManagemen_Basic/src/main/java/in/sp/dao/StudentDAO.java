@@ -55,7 +55,7 @@ public class StudentDAO {
                 sql,
                 new BeanPropertyRowMapper<>(Student.class));
     }
-
+ 
     // Count Total Students
     public int totalStudents() {
         String sql = "SELECT COUNT(*) FROM student";
