@@ -9,7 +9,7 @@ import in.sp.beans.Student;
 
 public class StudentDAO {
 
-    private JdbcTemplate jdbcTemplate; 
+    private JdbcTemplate jdbcTemplate;
 
     public StudentDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -25,14 +25,20 @@ public class StudentDAO {
     }
 
     // Update Student
+//    public int updateStudent(Student student) {
+//        String sql = "UPDATE student SET std_name=?, std_marks=? WHERE std_rollno=?";
+//        return jdbcTemplate.update(sql,
+//                student.getStd_name(),
+//                student.getStd_marks(),
+//                student.getStd_rollno());
+//    }
     public int updateStudent(Student student) {
-        String sql = "UPDATE student SET std_name=?, std_marks=? WHERE std_rollno=?";
-        return jdbcTemplate.update(sql,
-                student.getStd_name(),
-                student.getStd_marks(),
-                student.getStd_rollno());
+    	String sql="UPDATE student SET std_name=?,std_marks=?, WHERE std_rollno=?";
+    	return jdbcTemplate.update(sql,
+    			student.getStd_rollno(),
+    	student.getStd_name(),
+    	student.getStd_marks());
     }
-
     // Delete Student
     public int deleteStudent(int rollNo) {
         String sql = "DELETE FROM student WHERE std_rollno=?";
