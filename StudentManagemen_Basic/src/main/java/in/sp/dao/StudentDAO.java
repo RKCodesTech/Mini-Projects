@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-
+ 
 import in.sp.beans.Student;
 
 public class StudentDAO {
