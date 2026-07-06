@@ -14,7 +14,7 @@ public class StudentDAO {
     public StudentDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     } 
-
+ 
     // Insert Student
     public int insertStudent(Student student) {
         String sql = "INSERT INTO student VALUES(?,?,?)";
