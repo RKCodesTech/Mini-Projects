@@ -24,14 +24,7 @@ public class StudentDAO {
                 student.getStd_marks());
     }
 
-    // Update Student
-//    public int updateStudent(Student student) {
-//        String sql = "UPDATE student SET std_name=?, std_marks=? WHERE std_rollno=?";
-//        return jdbcTemplate.update(sql,
-//                student.getStd_name(),
-//                student.getStd_marks(),
-//                student.getStd_rollno());
-//    }
+
     public int updateStudent(Student student) {
     	String sql="UPDATE student SET std_name=?,std_marks=?, WHERE std_rollno=?";
     	return jdbcTemplate.update(sql,
