@@ -9,7 +9,7 @@ import in.sp.beans.Student;
 
 public class StudentDAO {
 
-    private JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate; 
 
     public StudentDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
