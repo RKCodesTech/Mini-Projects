@@ -40,11 +40,11 @@ public class StudentDAO {
     }
 
     // Search Student
-    public Student searchStudent(int rollNo) {
+    public Student searchStudent(int rollNo) {   //iska return type student hai  and ise bs roll no. ki need hai to vohi input le rha hai
         String sql = "SELECT * FROM student WHERE std_rollno=?";
         return jdbcTemplate.queryForObject(
                 sql,
-                new BeanPropertyRowMapper<>(Student.class),
+                new BeanPropertyRowMapper<>(Student.class),//it will convert student row into obj and <> are generic that it will return op studentent
                 rollNo);
     }
 
