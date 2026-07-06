@@ -48,7 +48,7 @@ public class StudentDAO {
                 rollNo);
     }
 
-    // Display All Students
+    // Display All Students 
     public List<Student> displayStudents() {
         String sql = "SELECT * FROM student";
         return jdbcTemplate.query(
