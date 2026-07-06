@@ -38,15 +38,19 @@ public class StudentDAO {
         return jdbcTemplate.update(sql, rollNo);
     }
 
-    // Search Student
+//     Search Student
     public Student searchStudent(int rollNo) {
         String sql = "SELECT * FROM student WHERE std_rollno=?";
         return jdbcTemplate.queryForObject(
                 sql,
-                new BeanPropertyRowMapper<>(Student.class),
+                new BeanPropertyRowMapper<>(Student.class),//it wil convert student row into obj and <> are generic that it will return op student
                 rollNo);
     }
 
+   public student searchStudent (int rollno) {
+	   String sql="SELECT * FROM student WHERE std_roll=?";
+	   return jdbcTemplate(sql,)
+   }
     // Display All Students 
     public List<Student> displayStudents() {
         String sql = "SELECT * FROM student";
