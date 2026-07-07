@@ -18,6 +18,12 @@ public class StudentServices {
 		return studentdao.deleteStudent(rollno);
 		
 	}
-	
+	public Student searchStudent(int rollno) {
+		return studentdao.searchStudent(rollno);
+		
+	}
+	public List<Student> displayStudents(){
+		return studentdao.displayStudents();
+	}
 
 }
