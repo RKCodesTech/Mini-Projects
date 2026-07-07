@@ -27,7 +27,11 @@ public JdbcTemplate jdbctemplate() {
 }
 @Bean
 public StudentDAO studentDAO() {
-	
+	return new StudentDAO(jdbctemplate());
+}
+@Bean
+public StudentServices services() {
+	return new StudentServices(studentDAO());
 }
 
 }
