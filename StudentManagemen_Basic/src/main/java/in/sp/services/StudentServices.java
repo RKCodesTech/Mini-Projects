@@ -23,6 +23,9 @@ public class StudentServices {
 		return studentdao.searchStudent(rollno);
 		
 	}
+	public int totalStudents() {
+	    return studentdao.totalStudents();
+	}
 	public List<Student> displayStudents(){
 		return studentdao.displayStudents();
 	}
